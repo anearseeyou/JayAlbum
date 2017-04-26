@@ -1,0 +1,1021 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+
+a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family:"Microsoft YaHei UI";
+    background: url("../images/bg.png");
+}
+
+/* 导航 **************************************************************************/
+
+.header {
+    width: 100%;
+    height: 35px;
+    background: url("../images/topbar.png") repeat-x 0 -230px;
+}
+
+.header .logo{
+    float: left;
+    width: 300px;
+    height: 35px;
+    line-height:35px;
+    color: #fff;
+    font-size:18px;
+    margin-left:50px;
+    text-shadow: 0 2px 1px #650303;
+}
+
+.header .login {
+    float: right;
+    width: 50px;
+    height:35px;
+    line-height: 35px;
+    margin-right: 3.5%;
+}
+
+.header .login a {
+    display: block;
+    padding-right: 20px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.header .login a img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 3%;
+    top: 0.2%;
+}
+
+.header .login-list {
+    width: 160px;
+    border: 1px solid #000;
+    background: #2f2f2f;
+    position: absolute;
+    right: 1.1%;
+    top: 3.7%;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.header .login-list ul li {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+}
+
+.header .login-list ul li a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.header .login-list ul li:hover {
+    background-color: #222;
+}
+
+.header .login-list a .icon {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin: 12px 10px 0 8px;
+    background: url("../images/toplist.png") no-repeat 0 0;
+}
+
+.header .login-list a em {
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height:40px;
+    font-style: normal;
+}
+
+.header .login-list .sjx {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 68px;
+    top: -18px;
+    z-index: -1;
+}
+
+.header .login-list a .icon-wx {
+    background-position: -20px -20px;
+}
+
+.header .login-list a .icon-qq {
+    background-position: -20px -40px;
+}
+
+.header .login-list a .icon-wb {
+    background-position: 0 -20px;
+}
+
+.header .login-list a .icon-wy {
+    background-position: 0 -40px;
+}
+
+.header #nav {
+    float: left;
+    width: 1008px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    margin-left:100px;
+    z-index: 11;
+}
+
+.header #nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 0 1px 0 #650303;
+    padding-left: 14px;
+    overflow: hidden;
+}
+
+.header #nav a em {
+    float: left;
+    overflow: hidden;
+    line-height: 37px;
+    font-style: normal;
+    padding-right: 14px;
+    text-shadow: 0 1px 0 #650303;
+}
+
+.header #nav a.current {
+    background: url("../images/topbar.png") no-repeat left -268px;
+}
+
+.header #nav a.current em.current-bg {
+    background: url("../images/topbar.png") no-repeat right -268px;
+}
+
+.header #nav ul {
+    display: flex;
+}
+
+.header #nav ul li {
+    overflow: hidden;
+    flex: 1;
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.header #nav ul li a {
+    display: inline-block;
+}
+
+.header #nav ul li span {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    top: 35px;
+    z-index: 1;
+}
+
+/* 模态框 **************************************************************************/
+
+.interface {
+    width: 600px;
+    height: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: -10px 20px 100px black;
+    position: absolute;
+    left: 30%;
+    top:30%;
+    z-index: 101;
+}
+
+.interface .panel {
+    cursor: move;
+    height: 50px;
+    background: #2f2f2f;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.interface .panel .close{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url("../images/layer.png") no-repeat 0 -88px;
+    position: absolute;
+    right: 15px;
+    top: 11px;
+    cursor: pointer;
+}
+
+.interface .panel h1 {
+    display: block;
+    line-height: 50px;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+.interface .mode-login {
+    padding-top: 20px;
+    width: 360px;
+    height: 266px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.interface .mode-login .user-pwd {
+    height: 40px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.interface .mode-login img {
+    float: left;
+    margin: 8px 5px;
+}
+
+.interface .mode-login input {
+    width: 320px;
+    height: 38px;
+    padding-left: 10px;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+}
+
+.interface .mode-login .setting a {
+    font-size: 12px;
+    color: #222;
+}
+
+.interface .mode-login .setting input {
+    float: left;
+    width: 12px;
+    height: 18px;
+    margin: 3px 3px;
+}
+
+.interface .mode-login .setting .seting-right {
+    float: right;
+}
+
+.interface .mode-login .sign {
+    width: 300px;
+    height: 40px;
+    background: #2f2f2f;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 15px 0px 15px 15px;
+}
+
+.interface .mode-login .reg {
+    font-size: 12px;
+    color: #222;
+    text-align: center;
+}
+
+.interface .mode-login .reg a {
+    color: #fd4500;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+/* 内容和Banner公共样式 ***********************************************************/
+
+#banner .banner-left,
+#rotate3D .content-left{
+    float: left;
+    width: 20%;
+    height: 100%;
+    margin-left: 3%;
+}
+
+#banner .banner-middle,
+#rotate3D .content-middle{
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin-left: 2%;
+}
+
+#banner .banner-right,
+#rotate3D .content-right{
+    float: left;
+    width: 20%;
+    height: 100%;
+    margin-left: 2%;
+}
+
+/* banner部分 **********************************************************************/
+
+#banner {
+    width: 100%;
+    height: 440px;
+    color: #ccc;
+    border-top: 1px solid rgba(235, 52, 46, 0.8);
+    font-size: 14px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: context-menu;
+    margin-top: 15px;
+}
+
+#banner ul {
+    display: none;
+}
+
+#banner .banner-middle {
+    background: url('../images/jaybg.jpg') no-repeat center center;
+    background-size: 900px auto;
+}
+
+#banner li {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    position: relative;
+}
+
+#banner li:hover {
+    transition: 1s;
+    border-bottom: 1px solid #999;
+    background-color: #222;
+}
+
+#banner li img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+#banner li p {
+    text-align: center;
+    border-right: 1px solid #222;
+    margin-left: 8px;
+}
+
+#banner li p:nth-child(1) {
+    flex: 0.1;
+}
+
+#banner li p:nth-child(2) {
+    flex: 0.15;
+}
+
+#banner li p:nth-child(3) {
+    flex: 0.55;
+}
+
+#banner li p:nth-child(4) {
+    flex: 0.2;
+}
+
+#banner li p:nth-child(5) {
+    flex: 0.15;
+    border-right: none;
+}
+
+#banner li span {
+    text-align: center;
+    margin-left: 8px;
+}
+
+#banner li .num {
+    flex: 0.1;
+    margin-left: 0;
+}
+
+#banner li .control {
+    flex: 0.15;
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    height: 40px;
+}
+
+#banner li .title {
+    flex: 0.55;
+}
+
+#banner li .singer {
+    flex: 0.2;
+}
+
+#banner li .timer {
+    flex: 0.15;
+}
+
+/* 悬浮粒子 */
+#particles-js {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    margin-left:-25%;
+    z-index: -1;
+}
+
+/* 内容部分 */
+#rotate3D{
+    width: 100%;
+    height: 400px;
+    margin-top:22px;
+}
+
+#rotate3D .content-left{
+    color: #ccc;
+    text-align: left;
+    font-size: 16px;
+}
+
+#rotate3D .content-left .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ccc;
+    padding: 5px 0px 15px 0;
+    text-align: center;
+}
+
+#rotate3D .content-left p{
+    margin-bottom:12px;
+}
+
+#rotate3D .content-left span{
+    color: rgba(192,12,12,0.6);
+    font-weight:700;
+}
+
+#rotate3D .content-left .text{
+    font-size:18px;
+    color: #888;
+}
+
+
+/* 3D旋转 *****************************************************************************/
+
+#rotate3D .content-middle {
+    font-size: 16px;
+    font-family: 'Sahitya', serif;
+    box-sizing: border-box;
+    line-height: 1.618;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top:50px;
+}
+
+#rotate3D .content-middle ul::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#rotate3D .content-middle li {
+    margin: 5px;
+    position: relative;
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    -webkit-transform-origin: 50% 50% 70px;
+    transform-origin: 50% 50% 70px;
+}
+
+#rotate3D .content-middle li h3 {
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#rotate3D .content-middle ul {
+    width: 600px;
+    font-size: 0;
+    padding: 0;
+    max-width: 760px;
+    margin: 0 auto;
+    list-style: none
+}
+
+#rotate3D .content-middle .w {
+    font-size: medium;
+    font-size: initial;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50% -70px;
+    transform-origin: 50% 50% -70px;
+    will-change: transform;
+    -webkit-animation: 200ms ease-out 0ms 1 normal forwards paused;
+    animation: 200ms ease-out 0ms 1 normal forwards paused;
+}
+
+#rotate3D .content-middle .f,
+#rotate3D .content-middle .b {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: white;
+    -webkit-transition: none;
+    transition: none;
+}
+
+#rotate3D .content-middle .f {
+    background-color: rgba(240, 59, 50, .5);
+    background: -webkit-linear-gradient(#222, rgba(240, 59, 50, .5));
+    background: linear-gradient(#222, rgba(240, 59, 50, .5));
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+#rotate3D .content-middle .f > svg {
+    mix-blend-mode: luminosity;
+}
+
+#rotate3D .content-middle .b {
+    padding: 16px;
+    padding: 1rem;
+    background-image: -webkit-radial-gradient(circle, #333, #000 160%);
+    background-image: radial-gradient(circle, #333, #000 160%);
+    -webkit-transform: translate3d(0, 0, -1px);
+    transform: translate3d(0, 0, -1px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-shadow: 0 20px 20px black;
+    text-align: center;
+}
+
+#rotate3D .content-middle .in-top .b,
+#rotate3D .content-middle .out-top .b {
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: translate3d(0, -100%, 0) rotate3d(1, 0, 0, 90deg);
+    transform: translate3d(0, -100%, 0) rotate3d(1, 0, 0, 90deg);
+}
+
+#rotate3D .content-middle .in-right .b,
+#rotate3D .content-middle .out-right .b {
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 1, 0, 90deg);
+    transform: translate3d(100%, 0, 0) rotate3d(0, 1, 0, 90deg);
+}
+
+#rotate3D .content-middle .in-bottom .b,
+#rotate3D .content-middle .out-bottom .b {
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: translate3d(0, 100%, 0) rotate3d(-1, 0, 0, 90deg);
+    transform: translate3d(0, 100%, 0) rotate3d(-1, 0, 0, 90deg);
+}
+
+#rotate3D .content-middle .in-left .b,
+#rotate3D .content-middle .out-left .b {
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, -1, 0, 90deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, -1, 0, 90deg);
+}
+
+#rotate3D .content-middle .in-top .w {
+    -webkit-animation-name: in-top;
+    animation-name: in-top;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+#rotate3D .content-middle .in-right .w {
+    -webkit-animation-name: in-right;
+    animation-name: in-right;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+#rotate3D .content-middle .in-bottom .w {
+    -webkit-animation-name: in-bottom;
+    animation-name: in-bottom;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+#rotate3D .content-middle .in-left .w {
+    -webkit-animation-name: in-left;
+    animation-name: in-left;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+#rotate3D .content-middle .out-top .w {
+    -webkit-animation-name: out-top;
+    animation-name: out-top;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+#rotate3D .content-middle .out-right .w {
+    -webkit-animation-name: out-right;
+    animation-name: out-right;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+#rotate3D .content-middle .out-bottom .w {
+    -webkit-animation-name: out-bottom;
+    animation-name: out-bottom;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+#rotate3D .content-middle .out-left .w {
+    -webkit-animation-name: out-left;
+    animation-name: out-left;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+/* 右边部分  **********************************************/
+
+#rotate3D .content-right{
+    text-align: center;
+    color: #ccc;
+    background: url("../images/con-right.jpg") no-repeat center 160px;
+}
+
+#rotate3D .content-right h2{
+    background: rgba(0,0,0,.2);
+    line-height:70px;
+    margin-bottom:10px;
+    border-radius: 20px;
+}
+
+#rotate3D .content-right .title-bottom{
+    font-size:20px;
+}
+
+/* 页脚 ***************************************************/
+
+.footer {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: url("../images/topbar.png") repeat-x 0 -80px;
+    border-top: 2px solid rgb(235, 52, 46);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    font-size:15px;
+    text-shadow: 0 2px 2px #2f3030;
+}
+
+/* 响应式 */
+
+@media (max-width: 1660px) {
+    #banner .banner-middle {
+        background-size: 800px auto;
+    }
+    .header #nav {
+        margin-left:70px;
+    }
+}
+@media (max-width: 1600px) {
+    #rotate3D .content-left p{
+        margin-bottom:5px;
+    }
+    .header #nav {
+        margin-left:0px;
+    }
+    #banner .banner-middle {
+        background-size: 760px auto;
+    }
+}
+@media (max-width: 1440px) {
+    #banner {
+        font-size: 12px;
+    }
+    #rotate3D .content-left .text{
+        font-size:16px;
+    }
+    #rotate3D .content-left .title {
+        font-size: 20px;
+        padding-left:5px;
+    }
+    #rotate3D .content-right h2{
+        font-size:18px;
+        line-height:60px;
+    }
+    #rotate3D .content-right .title-bottom{
+        font-size:16px;
+    }
+    #banner .banner-middle {
+        background-size: 700px auto;
+    }
+    .header .logo{
+        width: 240px;
+        font-size:16px;
+    }
+    #rotate3D .content-right{
+        background: url("../images/con-right.jpg") no-repeat center 145px;
+    }
+    .st-panel .tab-job {
+        top: 40%;
+    }
+}
+@media all and (max-width: 1366px) and (max-height: 768px){
+    .header .logo{
+        width: 180px;
+        font-size:14px;
+
+    }
+    .header #nav{
+        width:auto;
+        margin-left:40px;
+    }
+    .header #nav a ,
+    .header .login a{
+        font-size: 12px;
+    }
+    .header .login-list {
+        width: 140px;
+        right: 2.1%;
+        top: 5.3%;
+    }
+    .header .login-list ul li {
+        height: 35px;
+    }
+    .st-panel .portrait {
+        top: 30%;
+        left: 40%;
+    }
+    .st-panel .charm {
+        font-size: 0.8em;
+    }
+    .st-panel .more .about ul {
+        margin-left:-28%;
+    }
+    #banner .banner-middle {
+        background-size: 640px auto;
+    }
+    #rotate3D .content-left,
+    #rotate3D .content-right{
+        display: none;
+    }
+    #rotate3D .content-left .text{
+        font-size:14px;
+    }
+    #rotate3D .content-middle{
+        width: 100%;
+        height:140px;
+        padding-top: 5px;
+        position: relative;
+        z-index: 2;
+    }
+    #rotate3D .content-middle li {
+        width: 100px;
+        height: 100px;
+        margin-right:20px;
+        font-size:14px;
+    }
+    #rotate3D .content-middle li h3 {
+        font-size:14px;
+    }
+    #rotate3D .content-middle ul {
+        width: 100%;
+        max-width:100%;
+        margin-left:10.8%;
+    }
+    .footer h2{
+        font-size:18px;
+    }
+}
+
+/* Define Animate */
+
+@-webkit-keyframes in-top {
+    from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+    to {
+        -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+        transform: rotate3d(-1, 0, 0, 90deg)
+    }
+}
+
+@keyframes in-top {
+    from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+    to {
+        -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+        transform: rotate3d(-1, 0, 0, 90deg)
+    }
+}
+
+@-webkit-keyframes out-top {
+    from {
+        -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+        transform: rotate3d(-1, 0, 0, 90deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+}
+
+@keyframes out-top {
+    from {
+        -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+        transform: rotate3d(-1, 0, 0, 90deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+}
+
+@-webkit-keyframes in-right {
+    from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, -1, 0, 90deg);
+        transform: rotate3d(0, -1, 0, 90deg)
+    }
+}
+
+@keyframes in-right {
+    from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, -1, 0, 90deg);
+        transform: rotate3d(0, -1, 0, 90deg)
+    }
+}
+
+@-webkit-keyframes out-right {
+    from {
+        -webkit-transform: rotate3d(0, -1, 0, 90deg);
+        transform: rotate3d(0, -1, 0, 90deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+}
+
+@keyframes out-right {
+    from {
+        -webkit-transform: rotate3d(0, -1, 0, 90deg);
+        transform: rotate3d(0, -1, 0, 90deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+}
+
+@-webkit-keyframes in-bottom {
+    from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+    to {
+        -webkit-transform: rotate3d(1, 0, 0, 90deg);
+        transform: rotate3d(1, 0, 0, 90deg)
+    }
+}
+
+@keyframes in-bottom {
+    from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+    to {
+        -webkit-transform: rotate3d(1, 0, 0, 90deg);
+        transform: rotate3d(1, 0, 0, 90deg)
+    }
+}
+
+@-webkit-keyframes out-bottom {
+    from {
+        -webkit-transform: rotate3d(1, 0, 0, 90deg);
+        transform: rotate3d(1, 0, 0, 90deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+}
+
+@keyframes out-bottom {
+    from {
+        -webkit-transform: rotate3d(1, 0, 0, 90deg);
+        transform: rotate3d(1, 0, 0, 90deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+}
+
+@-webkit-keyframes in-left {
+    from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(0, 1, 0, 90deg)
+    }
+}
+
+@keyframes in-left {
+    from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(0, 1, 0, 90deg)
+    }
+}
+
+@-webkit-keyframes out-left {
+    from {
+        -webkit-transform: rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(0, 1, 0, 90deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+}
+
+@keyframes out-left {
+    from {
+        -webkit-transform: rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(0, 1, 0, 90deg)
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+}
