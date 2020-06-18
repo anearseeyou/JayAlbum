@@ -12,9 +12,9 @@ a {
 
 body {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family:"Microsoft YaHei UI";
+    /*height: 100%;*/
+    /*overflow: hidden;*/
+    /*font-family:"Microsoft YaHei UI";*/
     background: url("../images/bg.png");
 }
 
@@ -246,7 +246,7 @@ body {
     height: 40px;
     position: relative;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 2px;
     margin-bottom: 15px;
 }
 
@@ -257,9 +257,9 @@ body {
 
 .interface .mode-login input {
     width: 320px;
-    height: 38px;
+    height: 100%;
     padding-left: 10px;
-    border-radius: 0 5px 5px 0;
+    /*border-radius: 0 5px 5px 0;*/
     outline: none;
 }
 
@@ -690,7 +690,7 @@ body {
 #rotate3D .content-right{
     text-align: center;
     color: #ccc;
-    background: url("../images/con-right.jpg") no-repeat center 160px;
+    background: url("../images/con-right.jpg") no-repeat center 145px;
 }
 
 #rotate3D .content-right h2{
